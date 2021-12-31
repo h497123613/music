@@ -49,31 +49,6 @@
 .indexContainer .recommend {
   padding: 20rpx;
 }
-
-.header .title {
-  color: #aaa;
-  line-height: 80rpx;
-}
-
-.header .headerText {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header .headerText .text-left {
-  color: black;
-}
-
-.header .headerText .text-right {
-  font-size: 28rpx;
-  border: 1px solid #aaa;
-  width: 150rpx;
-  height: 60rpx;
-  text-align: center;
-  line-height: 60rpx;
-  border-radius: 30rpx;
-}
-
 /* scroll-view */
 .indexContainer .recommend .scroll{
   display: flex;
@@ -120,7 +95,7 @@
   width: 90%;
   height: 400rpx;
   margin: 0 auto;
-  background-color: #aaa;
+  background-color: #ccc;
   padding: 20rpx;
 }
 .indexContainer .rank .rankSwiper .swiperItem .main .mainTitle{
@@ -138,4 +113,7 @@
 }
 .indexContainer .rank .rankSwiper .swiperItem .main .mainList .mainListItem .count{
   margin: 0 50rpx;
+}
+.indexContainer .rank .rankSwiper .swiperItem .main .mainList .mainListItem .songName{
+  font-size: 28rpx;
 }
