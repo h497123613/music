@@ -1,0 +1,107 @@
+<view class="indexContainer">
+  <!-- 轮播图 -->
+  <swiper class="bannerSwiper" indicator-dots indicator-active-color="#D53C33">
+    <swiper-item class="swiperItem">
+      <image class="img" src="../../static/images/mylove.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiperItem">
+      <image class="img" src="../../static/images/mylove.jpg"></image>
+    </swiper-item>
+    <swiper-item class="swiperItem">
+      <image class="img" src="../../static/images/mylove.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 导航 -->
+  <view class="navList">
+    <view class="navItem">
+      <text class="iconfont .icon-meirituijian"></text>
+      <text class="navText">每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont .icon-gedan1"></text>
+      <text class="navText">歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont .icon-paihangbang"></text>
+      <text class="navText">排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont .icon-diantai"></text>
+      <text class="navText">电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont .icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text class="navText">直播</text>
+    </view>
+
+  </view>
+  <!-- 推荐歌曲 -->
+  <view class="recommend">
+    <view class="header">
+      <view class="title">推荐歌曲</view>
+      <view class="headerText">
+        <text class="text-left">为你精心推荐</text>
+        <text class="text-right">查看更多</text>
+      </view>
+    </view>
+    <!-- 
+      scroll-view注意点
+      1. 一定要设置高度
+      2. 内部本身不能使用flex,要想使用必须开启flex开关:enable-flex
+      3. 使用的时候要设置主轴方向
+    -->
+    <scroll-view class="scroll" scroll-x enable-flex>
+      <view class="scrollItem">
+        <image class="itemImg" src="../../static/images/mylove.jpg"></image>
+        <text class="itemText">国王排名第一波吉王国王排名第一波吉王国王排名第一波吉王国王排名第一波吉王国王排名第一波吉王国王排名第一波吉王国王排名第一波吉王</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 排行榜(rank) -->
+  <view class="rank">
+    <view class="header">
+      <view class="title">排行榜</view>
+      <view class="headerText">
+        <text class="text-left">热歌风向标</text>
+        <text class="text-right">查看更多</text>
+      </view>
+    </view>
+    <swiper class="rankSwiper" previous-margin="30rpx" next-margin="50rpx">
+      <swiper-item class="swiperItem">
+        <view class="main">
+          <view class="mainTitle">热歌榜</view>
+          <view class="mainList">
+            <view class="mainListItem">
+              <image class="songImg" src="/static/images/mylove.jpg"></image>
+              <text  class="count">1</text>
+              <text class="songName">啧啧啧</text>
+            </view>
+            <view class="mainListItem">
+              <image class="songImg" src="/static/images/mylove.jpg"></image>
+              <text  class="count">1</text>
+              <text class="songName">啧啧啧</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="swiperItem">
+        <view class="main">
+          <view class="mainTitle">热歌榜</view>
+          <view class="mainList">
+            <view class="mainListItem">
+              <image class="songImg" src="/static/images/mylove.jpg"></image>
+              <text  class="count">1</text>
+              <text class="songName">啧啧啧</text>
+            </view>
+            <view class="mainListItem">
+              <image class="songImg" src="/static/images/mylove.jpg"></image>
+              <text  class="count">1</text>
+              <text class="songName">啧啧啧</text>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+
+</view>

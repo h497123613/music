@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#D53C33",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "阿韩的音乐盒"
+  }
+}
