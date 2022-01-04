@@ -1,0 +1,59 @@
+/* pages/video/index.wxss */
+/* header */
+.videoContainer {
+  height: 100%;
+}
+.videoContainer .header {
+  height: 80rpx;
+  display: flex;
+  padding: 0 10rpx;
+  align-items: center;
+}
+.videoContainer .header image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.videoContainer .header .search {
+  text-align: center;
+  color: red;
+  font-size: 30rpx;
+  line-height: 64rpx;
+  height: 64rpx;
+  box-sizing: border-box;
+  margin: 0 20rpx;
+  flex: 1;
+  border: solid #aaa 1rpx;
+}
+
+/* scroll-view nav导航 */
+.videoContainer .navScroll {
+  height: 60rpx;
+  display: flex;
+  padding-left: 20rpx;
+}
+.videoContainer .navScroll .navItem {
+  font-size: 30rpx;
+  box-sizing: border-box;
+  line-height: 60rpx;
+  margin-right: 50rpx;
+  flex-shrink: 0;
+}
+
+.videoContainer .navScroll .navItem.active {
+  border-bottom: 1px solid red;
+}
+
+/* 视频 */
+.videoContainer .videoScroll {
+  height: calc(100vh - 150rpx);
+  padding-top: 10rpx;
+}
+.videoContainer .videoScroll .videoItem{
+  padding: 0 20rpx;
+}
+.videoContainer .videoScroll .videoItem .video{
+  width: 100%;
+  height: 360rpx;
+  border-radius: 20rpx;
+}

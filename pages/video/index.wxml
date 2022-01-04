@@ -1,0 +1,19 @@
+<view class="videoContainer">
+  <!-- header -->
+  <view class="header">
+    <image src="../../static/images/video/video.jpg" alt=""></image>
+    <view class="search">搜索音乐</view>
+    <image class="logo" src="../../static/images/logo.png"></image>
+  </view>
+  <!-- nav -->
+  <scroll-view scroll-x enable-flex class="navScroll">
+    <view bindtap="changeItem" class="navItem {{item.id === currentNavId && 'active'}}" id="{{item.id}}" wx:for="{{navList}}" wx:key="id">
+      {{item.name}}</view>
+  </scroll-view>
+  <!-- 视频 -->
+  <scroll-view scroll-y enable-flex class="videoScroll">
+    <view class="videoItem" wx:for="{{videoList}}" wx:key="vid">
+      <video src="{{item.urlInfo.url}}" class="video"></video>
+    </view>
+  </scroll-view>
+</view>
