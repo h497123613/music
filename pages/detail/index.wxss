@@ -1,0 +1,88 @@
+.detailContainer{
+  height: 100%;
+  background-color: #aaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detailContainer .songName{
+  color: white;
+}
+.detailContainer .needle{
+  position: relative;
+  width: 280rpx;
+  height: 300rpx;
+  z-index: 99;
+}
+
+.detailContainer .needle .needleImg{
+    width: 280rpx;
+    height: 300rpx;
+    left: 92rpx;
+    top: 40rpx;
+    position: absolute;
+    transform:rotate(-20deg);
+    transform-origin: 2rpx 20rpx;
+    transition: transform 1s;
+}
+.detailContainer .needle .needleImg.active{
+  transform: rotate(0);
+}
+
+.detailContainer .disc{
+  position: relative;
+    width: 600rpx;
+    height: 600rpx;
+    margin-top: -140rpx;
+}
+
+@keyframes move{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.detailContainer .disc.active{
+  animation: move 4s linear infinite;
+}
+
+.detailContainer .disc .discImg{
+    width: 600rpx;
+    height: 600rpx;
+}
+.detailContainer .disc .songImg{
+  position: absolute;
+    width: 400rpx;
+    height: 400rpx;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;   
+    margin: auto;
+    border-radius: 50%;
+}
+/* 底部控制区域 */
+.musicControl {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  border-top: 1rpx solid #fff;
+  width: 100%;
+  display: flex;
+}
+
+.musicControl  text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.musicControl  text.big{
+  font-size: 80rpx;
+}

@@ -1,9 +1,11 @@
 {
   "pages": [
+    "pages/video/index",
+    "pages/detail/index",
+    "pages/recommend/index",
     "pages/index/index",
     "pages/login/index",
-    "pages/center/index",
-    "pages/video/index"
+    "pages/center/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#D53C33",

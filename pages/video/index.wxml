@@ -6,14 +6,40 @@
     <image class="logo" src="../../static/images/logo.png"></image>
   </view>
   <!-- nav -->
-  <scroll-view scroll-x enable-flex class="navScroll">
-    <view bindtap="changeItem" class="navItem {{item.id === currentNavId && 'active'}}" id="{{item.id}}" wx:for="{{navList}}" wx:key="id">
+  <scroll-view 
+  scroll-x 
+  enable-flex 
+  class="navScroll" 
+  scroll-into-view="{{'scroll'+currentNavId}}"
+  scroll-with-animation
+  >
+    <view data-id="{{item.id}}" bindtap="changeItem" class="navItem {{item.id === currentNavId && 'active'}}" id="{{'scroll' + item.id}}" wx:for="{{navList}}" wx:key="id">
       {{item.name}}</view>
   </scroll-view>
   <!-- 视频 -->
-  <scroll-view scroll-y enable-flex class="videoScroll">
+  <scroll-view bindscrolltolower="bindscrolltolower" bindrefresherrefresh="bindrefresherrefresh" refresher-triggered="{{flag}}" refresher-enabled scroll-y enable-flex class="videoScroll">
     <view class="videoItem" wx:for="{{videoList}}" wx:key="vid">
-      <video src="{{item.urlInfo.url}}" class="video"></video>
+      <video bindended="handlerEnd" bindtimeupdate="handlerTimeupdate" wx:if="{{item.vid === vid}}" id="{{item.vid}}" bindtap="playOrPause" src="{{item.urlInfo.url}}" class="video"></video>
+      <image id="{{item.vid}}" class="videoImg" bindtap="playOrPause" wx:else src="{{item.coverUrl}}"></image>
+
+      <view class="content">{{item.title}}</view>
+      <view class="footer">
+        <image class="avatar" src="{{item.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-buoumaotubiao15"></text>
+            <text class="count">{{item.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun1"></text>
+            <text class="count">{{item.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+        </view>
+      </view>
     </view>
   </scroll-view>
 </view>
