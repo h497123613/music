@@ -1,11 +1,9 @@
 {
   "pages": [
-    "pages/video/index",
-    "pages/detail/index",
-    "pages/recommend/index",
     "pages/index/index",
-    "pages/login/index",
-    "pages/center/index"
+    "pages/video/index",
+    "pages/center/index",
+    "pages/login/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#D53C33",
@@ -34,5 +32,16 @@
         "selectedIconPath": "static/images/tabs/tab-my-current.png"
       }
     ]
-  }
+  },
+  "requiredBackgroundModes": ["audio", "location"],
+  "subpackages": [
+    {
+      "root": "package",
+      "pages": [
+        "pages/detail/index",
+        "pages/recommend/index"
+      ],
+      "independent":true
+    }
+  ]
 }

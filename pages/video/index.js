@@ -193,7 +193,7 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function ({from}) {
-    if(from==='button'){
+    if(from === 'button'){
       //点的是按钮进行转发
         return {
           title:'',

@@ -69,6 +69,12 @@ Page({
       }
     }
   },
+  //点击每日推荐跳转至每日推荐页
+  toRecommend(){
+    wx.navigateTo({
+      url: '/package/pages/recommend/index',
+    })
+  },
   onLoad: function (options) {
     //获取轮播图数据
     this.getBannerList()
